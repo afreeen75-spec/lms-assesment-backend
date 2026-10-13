@@ -22,7 +22,6 @@ class LoginView(APIView):
     permission_classes = [AllowAny]
 
     def get_authenticate_header(self, request):
-        # makes wrong credentials return 401 instead of 403
         return f'{AUTH_HEADER_TYPES[0]} realm="api"'
 
     def post(self, request):
